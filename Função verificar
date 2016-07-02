@@ -1,0 +1,28 @@
+*/Tentei fazer como o Guerra explicou, mas encontrei certa dificuldade em fazer o código compilar. Depois de alguns estudos,
+cheguei a esses 2 códigos. Não sei dizer qual é melhor. Desculpe o atraso no código, achei que estava junto.
+
+
+int verificar (conjunto * c, int numero) {
+    conjunto* p = c;
+    
+	while (p != NULL && p->numero != numero){
+		p = p->prox;
+	}
+	if (p == NULL){
+		return FALSE;
+	}
+	else {
+		return TRUE;
+	}
+}
+
+
+int verificar (conjunto * c, int numero) {
+    conjunto* p;
+	for (p = c; p != NULL; p=p->prox){
+		if (p->numero == numero){
+			return TRUE;
+		}
+	}	
+  return FALSE;
+}  
